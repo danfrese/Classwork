@@ -45,16 +45,12 @@ public class AdjustPriceLoop
 			newPrice = in.nextDouble();
 			if(newPrice != 0){
 				item.adjustPrice(newPrice);
-				System.out.println("Product Code: " + item.getCode() + 
-								"\nDescription: " + item.getDescription() +
-								"\nPrice: " + item.getPrice() + 
-								"\nProduct Quantity: " + item.getQuantity());
+				System.out.println(item.toString());
 			} else {
 				done = true;
 				System.out.println("Program finished");
 			}
 		}
-		
 		in.close();
 	}
 }
