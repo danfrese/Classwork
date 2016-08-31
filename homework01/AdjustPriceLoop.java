@@ -43,7 +43,8 @@ public class AdjustPriceLoop
 		while (done == false) {
 			System.out.print("\nPlease enter the percent change to the product's price: ");
 			newPrice = in.nextDouble();
-			if(newPrice != 0){
+			
+			if (newPrice != 0){
 				item.adjustPrice(newPrice);
 				System.out.println(item.toString());
 			} else {
