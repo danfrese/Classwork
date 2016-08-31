@@ -20,10 +20,10 @@ public class AdjustPriceLoop
 
 		// Ask the user to enter the product code,
 		// description, price, and quantity.
-		System.out.print("Enter the product code: ");
-		newCode = in.next();
-		System.out.print("Enter the description: ");
-		newDescription = in.next();
+		System.out.println("Enter the product code: ");
+		newCode = in.nextLine();
+		System.out.println("Enter the description: ");
+		newDescription = in.nextLine();
 		System.out.print("Enter the price: ");
 		newPrice = in.nextDouble();
 		System.out.print("Enter the product quantity: ");
