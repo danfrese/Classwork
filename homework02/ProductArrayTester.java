@@ -46,7 +46,7 @@ public class ProductArrayTester {
 		}
 		
 		in.close();
-		System.out.printf("Total value of items in cart is: $" + totalSum);
+		System.out.printf("%s%.2f", "Total value of items in cart is: $", totalSum);
 
 	}
 
