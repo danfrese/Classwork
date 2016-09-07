@@ -19,10 +19,11 @@ public class ProductArrayTester {
 
 		System.out.print("Please enter the number of products: ");
 		prodCount = in.nextInt();
+		in.nextLine();
 		Product[] cart = new Product[prodCount];// Initialize array
-
+		
 		for (int i = 0; i < cart.length; i++) {
-			// Here there be "features"
+			// Here there be "features"			
 			System.out.println("Enter product code for product " + (i+1) + ": ");
 			prodCode = in.nextLine();
 			
