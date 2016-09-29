@@ -12,15 +12,15 @@ for (int i = list.size() - 1; i >= 0; i--) {
 	System.out.println(list.get(i));
 }
 
+
 //1b.
-int[] a = new int[] { 3, 2, 1 };
-int[] b = new int[] { 1, 2, 3 };
 for (int i = 0; i < a.length; i++) {
 	if (!(a[i] == b[i])) {
 		System.out.println("Difference found.");
 		break;
 	}
 }
+
 
 //1c.
 for (double i : data) {
