@@ -1,0 +1,27 @@
+1a. If you attempt to open a nonexistent file for reading then a FileNotFound exception 
+	will be thrown. This is a special case of an IOException, which has multiple different 
+	types of exceptions related to IO handling. 
+	
+	If you attempt to write to a nonexistent file the JVM will create one under the same 
+	name.
+	
+1b. You can open a file on Windows whose name contains a backslash by using the backslash 
+	twice.
+	String filename = "C:\\Users\\jane\Desktop\\output.dat"
+	File newFile = new File(filename);
+	Scanner in = new Scanner(newFile);
+	
+1c. The difference between an exception being thrown and catching said exception is that a 
+	thrown exception means an error has occurred within the program and some changes need 
+	to be made. This is different than catching an exception because when the exception has 
+	been thrown nothing is handling the problem at hand. The catch block receives the
+	exception and execution breaks from the current try block and resumes in the catch block. 
+	Thus, the catching of an exception fills the role of telling the program what to do should 
+	an exception occur, such as printing a stack trace after a FileNotFound exception is 
+	thrown.
+	
+1d. My program can use exception object to find out more about what caused the exception to 
+	occur. For example, if I want to print the execution pattern, I can have the object print
+	out a stack trace. In addition, if I want to know more specifically the exception that 
+	occurred, I can get the message that belongs to the exception and print it to the console
+	or elsewhere.
