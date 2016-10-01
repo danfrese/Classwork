@@ -51,12 +51,14 @@ public class Inventory {
 			// Assign values to variables by progressing through the text file
 			String prodCode = in.nextLine();
 			String prodDesc = in.nextLine();
-			if (in.hasNextInt()){// Make sure we're looking at an int
+			
+			// Make sure we're looking at an int or double
+			if (in.hasNextInt())
 				prodQuantity = in.nextInt();
-			}
-			if (in.hasNextDouble()) {
+
+			if (in.hasNextDouble())
 				prodPrice = in.nextDouble();
-			}
+
 			in.nextLine();// Empty the Scanner buffer
 
 			// Create a new product and add that product to the products collection
@@ -92,45 +94,46 @@ public class Inventory {
 		int num;
 		
 		while (in.hasNextLine()) {
+			// Clear and initialize variables
 			tempInput = "";
 			action = "";
 			prodCode = "";
 			temp = "";
-			// Accept and clean up input
-			tempInput = in.nextLine();
-			tempInput.replaceAll("\\s+", "");
 			num = 0;
 			boolean status = true;
+			
+			// Accept and clean input
+			tempInput = in.nextLine().replaceAll("\\s+", "");
 
+			// Parse the cleaned input
 			int i;
 			for (i = 0; i < tempInput.length(); i++) {
 				// Gather the action type characters into a string
 				if (Character.isLetter(tempInput.charAt(i))) {
 					action += tempInput.charAt(i);
 				}
-
-				if (Character.isDigit(tempInput.charAt(i)) && prodCode.length() < 8 && status) {
+				
+				// Check if the character is a digit to assign product code and amount
+				if (Character.isDigit(tempInput.charAt(i)) && status) {
 					prodCode = tempInput.substring(i, i + 7);
 					i += 7;
 					status = false;
+					temp = tempInput.substring(i, tempInput.length());
+					break;
 				}
-
-				temp = tempInput.substring(i, prodCode.length() - 1);
-				/*if (Character.isDigit(tempInput.charAt(i)) && prodCode.length() == 7) {
-					temp += tempInput.charAt(i);
-				}*/
 			}
 
-			num = Integer.parseInt(temp);
+			// Assign & cast the value to num
+			num = (int) Double.parseDouble(temp);
 
+			// Action logic
 			if (action.equals("sell")) {
 				find(prodCode).purchased(num * -1);
 			} else if (action.equals("buy")) {
 				find(prodCode).purchased(num);
 			} else if (action.equals("adjust")) {
-				find(prodCode).adjustPrice(num);
+				find(prodCode).adjustPrice((double) num);
 			}
-
 		}
 	}
 
