@@ -24,4 +24,4 @@
 	Insert INTO Book (ISBN, Author, Title) VALUES (9780077861704, 'Ross', 'Fundamentals of Coprorate Finance')
 	
 1c.	
-	SELECT Customer_Number FROM Invoice WHERE Invoice.Payment=0;
+	SELECT Customer_Number FROM Invoice WHERE Invoice.Payment = 0
