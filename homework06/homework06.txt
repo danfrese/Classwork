@@ -1,0 +1,19 @@
+1a.	The for loop starts with "i = from + 1" because the purpose of the loop is to compare the current entry
+	in the list to the element one index higher every iteration. This allwos the loop to compare entries to 
+	determine the lowest element value in this iteration.
+	
+1b.	LinearSearcher must compare the parameter against all array elements because the program must sequentially
+	look at each element in a sorted list to find the correct match. Since 9 doesn't exist in the array, all 
+	elements will be compared against.
+	
+1c.	BinarySearcher will compare 4 elements. 
+	5
+	7
+	8
+	8
+	
+	{1 2 3 4 5 6 7 8}
+	{5 6 7 8}
+	{7 8}
+	{8}
+	{}
