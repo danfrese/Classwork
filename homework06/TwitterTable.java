@@ -1,6 +1,5 @@
 package homework06;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -24,9 +23,9 @@ public class TwitterTable {
 	 * Reads name and twitter address pairs from the Scanner and adds them to
 	 * the byName and byAddress array lists.
 	 * 
-	 * @param in -- Scanner for reading the input
+	 * @param in - Scanner for reading the input
 	 */
-	public void read(Scanner in) throws IOException {
+	public void read(Scanner in) {
 		// Reads in the file and parses the values into the proper Array Lists
 		try {
 			String tempName = "";
@@ -34,6 +33,9 @@ public class TwitterTable {
 			while (in.hasNextLine()) {
 				tempName = in.nextLine();
 				tempHandle = in.nextLine();
+				
+				// Assign and check the input variables to ensure they're
+				// put into the correct array lists.
 				if (!(tempName.substring(0, 0).equals("@"))) {
 					byName.add(new Item(tempName, tempHandle));
 					byAddress.add(new Item(tempHandle, tempName));
@@ -45,6 +47,9 @@ public class TwitterTable {
 		} catch (Exception e) {
 			System.out.println("Incorrect file input. Please check your formatting and try again.");
 		}
+		// Sort the array lists for future parsing
+		Collections.sort(byName);
+		Collections.sort(byAddress);
 	}
    
 	/**
@@ -56,11 +61,10 @@ public class TwitterTable {
 	public String findAddress(String name) {
 		// Search the byName array list for an Item with a matching name,
 		// and returns its value.
-		Item entry = new Item(name, null);
-		int indexResult = Collections.binarySearch(byName, null);
-		if (indexResult >= 0) {
-			//TODO
-			return Collections.binarySearch(byName, null)
+		int index = Collections.binarySearch(byName, new Item(name, null));
+		
+		if (index >= 0) {
+			return byName.get(index).getValue();
 		}
 		return "Not Found";
 	}
@@ -75,6 +79,11 @@ public class TwitterTable {
 	public String findName(String twitterAddress) {
 		// Search the byAddress array list for an Item with a matching
 		// twitterAddress, and returns its value.
+		int index = Collections.binarySearch(byAddress, new Item(twitterAddress, null));
+		
+		if (index >= 0) {
+			return byAddress.get(index).getValue();
+		}
 		return "Not Found";
 	}
 }
