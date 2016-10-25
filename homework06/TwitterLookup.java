@@ -53,5 +53,6 @@ public class TwitterLookup {
 				System.out.println("Name: " + table.findName(n));
 			}
 		}
+		in.close();
 	}
 }
