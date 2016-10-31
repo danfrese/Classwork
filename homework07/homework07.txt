@@ -1,0 +1,17 @@
+Name: 		Dan Frese
+Assignment:	homework07
+
+1a. A DNS domain name is useful for resolving names to IP addresses and in reverse. To get an IP address based 
+	on the domain name, the host will consult it's internal directory first to see if it's cached a local record 
+	of what IP address this DNS entry is associated to. If one isn't found, it consults its DNS server, 
+	which is often the router it's connected to, otherwise a predefined DNS provider. The result returns an IP 
+	address for the host to connect to.
+
+1b.	The TCP protocol is a way for computers to communicate via streams of data. In the case of HTTP, if a computer 
+	is requesting access to a HTTP resource, the browser will open a TCP stream through which the server can 
+	"serve" the resource to the client's browser.
+	
+1c. A URLConnection object is simply an object that's been assigned to a HTTP web address. It allows the object 
+	to open TCP streams of data to GET and POST information from the HTTP form but assumes a small set of predefined 
+	protocols. A Socket object behaves similar to a URLConnection in that it can use the same set of predefined 
+	protocols but it allows for much more flexibility and ease of use when designing a customized protocol.

@@ -1,0 +1,30 @@
+Question 1a
+	start1 = 8
+	start2 = 9
+	end1 = 10
+	end2 = 11
+	
+	if (start1 > start2)
+		s = 8
+	else
+		s = 9
+	Result: s = 9
+	
+	if (end1 < end2)
+		e = 10
+	else
+		e = 11
+	Result: e = 10
+	
+	if (s < e)
+		"The appointments overlap"
+	else
+		"The appointments don't overlap"
+	Result: "The appointments overlap"
+
+Question 1b
+	int s = 0;
+	int i;
+	for (i = 10; i > 0; i--) {
+	  s += i; 
+	}

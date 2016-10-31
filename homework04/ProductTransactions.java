@@ -15,8 +15,7 @@ public class ProductTransactions
 	 * Main program.
 	 * @param args
 	 */
-	public static void main(String[] args) throws FileNotFoundException
-	{
+	public static void main(String[] args) throws FileNotFoundException {
 		Scanner console = new Scanner(System.in);
 		System.out.print("Enter products file name: ");
 		String productsFilename = console.nextLine();
@@ -33,5 +32,6 @@ public class ProductTransactions
 		}
 
 		System.out.println(myInventory.toString());
+		console.close();
 	}
 }

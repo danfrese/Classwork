@@ -23,7 +23,6 @@ Acevedo, Gloria
 Achtenhagen, Stephen
 @sachten
 . . .
-
 */
 
 public class TwitterLookup {

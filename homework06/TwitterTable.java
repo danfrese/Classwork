@@ -47,7 +47,7 @@ public class TwitterTable {
 		} catch (Exception e) {
 			System.out.println("Incorrect file input. Please check your formatting and try again.");
 		}
-		// Sort the array lists for future parsing
+		// Sort the array lists for future use
 		Collections.sort(byName);
 		Collections.sort(byAddress);
 	}
