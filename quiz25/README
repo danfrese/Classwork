@@ -1,0 +1,6 @@
+Finish the attached program to query the latitude & longitude for a given Zip code: 
+	adjust the code in the for-each loop to find table element text containing the strings 
+	Latitude, Longitude, or County Name, and when found, print the element's text and the 
+	nextElementSibiling's text.
+	
+Paste the lines from the for() loop that you change to make the program work.

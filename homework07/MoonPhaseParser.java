@@ -36,9 +36,9 @@ public class MoonPhaseParser {
 
 		// Build the URL string. Note that the year *must* be added as a parameter to the URL!
 		// Open a URLConnection using the URL.
-		String urlstring = ...;
+		String urlstring = "http://aa.usno.navy.mil/cgi-bin/aa_moonphases.pl?year=" + year + "?month=" + month + "?day=" + day;//TODO: Does this work?
 		URL url = new URL(urlstring);
-		URLConnection uc = ...;
+		URLConnection uc = url.openConnection();//TODO: does this work?
 		HttpURLConnection hc = (HttpURLConnection) uc;
 
 		// Check to see if the request was successful.
