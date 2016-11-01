@@ -12,6 +12,7 @@ Assignment:	homework07
 	"serve" the resource to the client's browser.
 	
 1c. A URLConnection object is simply an object that's been assigned to a HTTP web address. It allows the object 
-	to open TCP streams of data to GET and POST information from the HTTP form but assumes a small set of predefined 
-	protocols. A Socket object behaves similar to a URLConnection in that it can use the same set of predefined 
-	protocols but it allows for much more flexibility and ease of use when designing a customized protocol.
+	to open TCP streams of data to GET and POST information from the HTTP form but assumes a small set of 
+	predefined protocols. A Socket object behaves similarly to a URLConnection in that it can use the same set 
+	of predefined protocols but it allows for much more flexibility and ease of use when designing a customized 
+	protocol, such as setting a custom port.
