@@ -28,15 +28,19 @@ public class InventoryDB {
 					System.out.println("Notice: Exception during DROP TABLE Products: " + e.getMessage()
 							+ " (This is expected when the database is empty)");
 				}
+				
 				// If an execption occurs after this point, allow it to be thrown.
 				// ProductsDB table: Product_Code, Description, Quantity, Price
 				stat.execute(
-						"CREATE TABLE ProductsDB (Product_Code VARCHAR(7), Description VARCHAR(40), Quantity INT, Price DECIMAL(10,2))");
+						"CREATE TABLE ProductsDB (Product_Code VARCHAR(7), "
+						+ "Description VARCHAR(40), Quantity INT, Price DECIMAL(10,2))");
+
 				// Add default list of products using parallel arrays.
 				String productCodes[] = { "116-064", "257-535", "643-119", "011-025" };
 				String descriptions[] = { "Toaster", "Hair dryer", "Car vacuum", "Gallon 2% Milk" };
 				int quantities[] = { 50, 75, 43, 111 };
 				double prices[] = { 24.95, 29.95, 19.99, 2.95 };
+				
 				for (int i = 0; i < productCodes.length; i++) {
 					ProductDB a = new ProductDB(productCodes[i]);
 					a.addProduct(descriptions[i], quantities[i], prices[i]);

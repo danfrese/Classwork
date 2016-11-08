@@ -42,12 +42,10 @@ public class SimpleDataSource
       Gets a connection to the database.
       @return the database connection
    */
-   public static Connection getConnection() throws SQLException
-   {
-      return DriverManager.getConnection(url, username, password);
-   }
+	public static Connection getConnection() throws SQLException {
+		return DriverManager.getConnection(url, username, password);
+	}
 }
-
 
 
 
