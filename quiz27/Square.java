@@ -26,6 +26,7 @@ public class Square {
 	 */
 	public int getArea() {
 		// Fix the missing "if" to check for the end of recursion.
+		
 		if (width == 1) {
 			return 1;
 		} else {
