@@ -1,5 +1,6 @@
 package homework08;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,12 +15,12 @@ public class FindFiles {
 		ArrayList<String> foundFiles = new ArrayList<String>();
 		DirectorySearcher ds = new DirectorySearcher(extension, foundFiles);
 		ds.findMatchingFiles(new File(directory));
-
 		System.out.println("Found these files under directory " + directory + ":");
 		for (String f : foundFiles)
 		{
 			System.out.println(f);
 		}
+		console.close();
 	}
 
 }

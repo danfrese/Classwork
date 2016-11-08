@@ -1,0 +1,26 @@
+1a. public int count(String text, char ch) {
+		int occurs = 0;
+		if (text == null || text.equals("")) {
+			return occurs;
+		} else if(text.charAt(0) == ch) {
+			occurs = 1 + count(text.substring(1), ch);
+			return occurs;
+		} else if(text.charAt(0) != ch) {
+			occurs = count(text.substring(1), ch);
+			return occurs;
+		}
+		return occurs;
+	}
+
+1b. public static int arraySum(int[] a) {
+		int sum = 0;
+		int size = a.length;
+		int[] smallerA = Arrays.copyOf(a, size - 1);
+		
+		if (size == 1) {
+			return a[0];
+		} else {
+			sum = a[size - 1] + arraySum(smallerA);
+			return sum;
+		}
+	}
