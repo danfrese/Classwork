@@ -35,5 +35,16 @@ public class DirectorySearcher {
 	{
 		// Use the pseudocode outlined in the homework
 		// to help solve this recursive method.
+		
+		int sum = 0;
+		int size = a.length;
+		int[] smallerA = Arrays.copyOf(a, size - 1);
+		
+		if (size == 1) {
+			return a[0];
+		} else {
+			sum = a[size - 1] + arraySum(smallerA);
+			return sum;
+		}
 	}
 }

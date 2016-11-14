@@ -16,6 +16,7 @@ public class FindFiles {
 		DirectorySearcher ds = new DirectorySearcher(extension, foundFiles);
 		ds.findMatchingFiles(new File(directory));
 		System.out.println("Found these files under directory " + directory + ":");
+
 		for (String f : foundFiles)
 		{
 			System.out.println(f);
