@@ -7,7 +7,11 @@ import java.io.IOException;
 */
 public class BadInputException extends IOException
 {
-   public BadInputException() {}
+   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+public BadInputException() {}
    public BadInputException(String message)
    {
       super(message);

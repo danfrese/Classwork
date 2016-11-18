@@ -11,7 +11,9 @@ import java.util.Arrays;
  *
  */
 public class DirectorySearcher {
+	@SuppressWarnings("unused")
 	private String extension;
+	@SuppressWarnings("unused")
 	private ArrayList<String> foundFiles;
 	
 	/**
