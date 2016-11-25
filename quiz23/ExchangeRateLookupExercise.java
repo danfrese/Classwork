@@ -1,6 +1,6 @@
 package quiz23;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -26,6 +26,7 @@ public class ExchangeRateLookupExercise {
 		// TODO: Change this to false after completing the code below.
 		// When this flag is true, we will just print all lines without
 		// modification.
+		@SuppressWarnings("unused")
 		final boolean isTesting = true;
 
 		if (hc.getResponseCode() != 200) {

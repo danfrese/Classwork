@@ -51,6 +51,7 @@ public class InteractiveWebGet {
 						System.out.println(input);
 					}
 					System.out.println("---------------------------------------------------------");
+					in.close();
 				}
 			}
 		}
