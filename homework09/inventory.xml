@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<inventory>
+  <products>
+    <product>
+      <code>016-023</code>
+      <desc>Gallon 2% Milk</desc>
+      <quantity>10</quantity>
+      <price>2.49</price>
+    </product>
+    <product>
+      <code>016-043</code>
+      <desc>Saltine Crackers</desc>
+      <quantity>20</quantity>
+      <price>1.49</price>
+    </product>
+    <product>
+      <code>019-011</code>
+      <desc>Paper Towels</desc>
+      <quantity>15</quantity>
+      <price>2.23</price>
+    </product>
+    <product>
+      <code>020-026</code>
+      <desc>1 Qt. 10W-40 Motor Oil</desc>
+      <quantity>28</quantity>
+      <price>5.99</price>
+    </product>
+  </products>
+  <transactions>
+    <purchased>
+      <code>016-023</code>
+      <count>5</count>
+    </purchased>
+    <sold>
+      <code>019-011</code>
+      <count>3</count>
+    </sold>
+  </transactions>
+</inventory>
