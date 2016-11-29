@@ -97,16 +97,15 @@ public class InventoryParser {
 		 * Product object and added it to the inventory.
 		 */
 
-		int prodCount = Integer.parseInt(path.evaluate("count(inventory/products)", doc));
+		int prodCount = Integer.parseInt(path.evaluate("count(inventory/products/product)", doc));
 
 		for (int i = 1; i <= prodCount; i++) {
-			String code = path.evaluate("/inventory/products[" + i + "]/product/code", doc);
-			String description = path.evaluate("/inventory/products[" + i + "]/product/desc", doc);
-			int quantity = Integer.parseInt(path.evaluate("/inventory/products[" + i + "]/product/quantity", doc));
-			double price = Double.parseDouble(path.evaluate("/inventory/products[" + i + "]/product/price", doc));
+			String code = path.evaluate("/inventory/products/product[" + i + "]/code", doc);
+			String description = path.evaluate("/inventory/products/product[" + i + "]/desc", doc);
+			int quantity = Integer.parseInt(path.evaluate("/inventory/products/product[" + i + "]/quantity", doc));
+			double price = Double.parseDouble(path.evaluate("/inventory/products/product[" + i + "]/price", doc));
 
 			Product pr = new Product(code, description, price, quantity);
-
 			addProduct(pr);
 		}
 
@@ -118,8 +117,8 @@ public class InventoryParser {
 		int transPurchased = Integer.parseInt(path.evaluate("count(inventory/transactions/purchased)", doc));
 		
 		for (int i = 1; i <= transPurchased; i++) {
-			String code = path.evaluate("/inventory/transactions[" + i + "]/purchased/code", doc);
-			int count = Integer.parseInt(path.evaluate("/inventory/transactions[" + i + "]/purchased/count", doc));
+			String code = path.evaluate("/inventory/transactions/purchased[" + i + "]/code", doc);
+			int count = Integer.parseInt(path.evaluate("/inventory/transactions/purchased[" + i + "]/count", doc));
 			
 			find(code).purchased(count);
 		}
@@ -132,8 +131,8 @@ public class InventoryParser {
 		int transSold = Integer.parseInt(path.evaluate("count(inventory/transactions/sold)", doc));
 		
 		for (int i = 1; i <= transSold; i++) {
-			String code = path.evaluate("/inventory/transactions[" + i + "]/sold/code", doc);
-			int count = Integer.parseInt(path.evaluate("/inventory/transactions[" + i + "]/sold/count", doc));
+			String code = path.evaluate("/inventory/transactions/sold[" + i + "]/code", doc);
+			int count = Integer.parseInt(path.evaluate("/inventory/transactions/sold[" + i + "]/count", doc));
 			
 			find(code).sold(count);
 		}
